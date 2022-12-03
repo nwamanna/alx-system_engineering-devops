@@ -1,2 +1,2 @@
 #!/bin/bash
-ls --format=m
+ls -a  --format=commas --sort */
