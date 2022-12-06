@@ -1,2 +1,2 @@
 #!/bin/bash
-for i in {a..z}; do echo $i; |sort|grep "[^oo]"
+for i in {a..z}{a..z}; do echo $i;done|grep "[^oo]"
