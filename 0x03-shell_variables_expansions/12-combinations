@@ -1,2 +1,2 @@
 #!/bin/bash
-echo {a..z}{a..z} 
+for i in {a..z}{a..z}; do echo $i; done|sort|grep "[^oo]"|head -n 32
