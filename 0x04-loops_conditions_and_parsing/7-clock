@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+hour=0
+i=0
+num=12
+
+while ((hour <= num))
+do
+	echo "Hour: $hour"
+	if [ "$hour" -ne 12 ]
+	then
+		for ((i=1; i < 60; i++))
+		do
+			echo "$i"
+		done
+	fi
+	((hour+=1))
+done

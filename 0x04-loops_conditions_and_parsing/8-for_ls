@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+for file in $(ls -1 | grep -v '^\.')
+do
+	name=$(echo "$file" | cut -d'-' -f2-)
+	if [ -f "$file" ];
+	then
+		echo "$name"
+	fi
+done	
