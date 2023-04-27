@@ -4,11 +4,12 @@ num=10
 i=0
 while ((i < num))
 do
-	if [ "$i" -eq 9 ]
+	if [ "$i" -eq 8 ]
 	then
 		echo "Best School"
 		echo "Hi"
+	else
+		echo "Best School"
 	fi
-	echo "Best School"
 	((i+=1))
 done
