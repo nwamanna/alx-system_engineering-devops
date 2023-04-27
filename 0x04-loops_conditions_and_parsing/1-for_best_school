@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
+#prints Best school 10 times
 num=10
-
-
 for ((i=0; i < num; i++))
 do
 	echo "Best School"
