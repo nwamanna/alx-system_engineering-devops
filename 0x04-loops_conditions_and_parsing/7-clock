@@ -8,9 +8,11 @@ do
 	echo "Hour: $hour"
 	if [ "$hour" -ne 12 ]
 	then
-		for ((i=1; i < 60; i++))
+		i=0
+		while ((i < 60))
 		do
 			echo "$i"
+			((i+=1))
 		done
 	fi
 	((hour+=1))
