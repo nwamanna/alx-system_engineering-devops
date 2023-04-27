@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
+#prints words if conditions are true
 num=10
 i=0
-
 while ((i < num))
 do
 	if [ "$i" -eq 3 ]

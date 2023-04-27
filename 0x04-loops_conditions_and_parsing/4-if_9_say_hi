@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
+#prints hi on 9th iteration
 num=10
 i=0
-
 while ((i < num))
 do
 	if [ "$i" -eq 9 ]

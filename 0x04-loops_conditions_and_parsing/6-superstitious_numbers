@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
+#print words if conditons are met
 num=20
 i=0
-
 while [ "$i" -le "$num" ]
 do
 	case $i in

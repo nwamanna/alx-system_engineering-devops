@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
+#print hours and minutes
 hour=0
 i=0
 num=12
-
 while ((hour <= num))
 do
 	echo "Hour: $hour"
