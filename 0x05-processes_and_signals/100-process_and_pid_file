@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+#displays To infinity and beyond indefinitely.
+touch /var/run/myscript.pid
+pgrep -f 100-process_and_pid_file > /var/run/myscript.pid
+cleanup()
+{
+	echo "I hate the kill command"
+	rm -f /var/run/myscript.pid
+	exit 0
+}
+while ((1))
+do
+	echo "To infinity and beyond"
+	sleep 2
+	trap "echo 'I hate the kill command'" SIGTERM
+	trap "echo 'Y U no love me?!'" SIGINT
+	trap "cleanup" SIGQUIT SIGTERM
+done
