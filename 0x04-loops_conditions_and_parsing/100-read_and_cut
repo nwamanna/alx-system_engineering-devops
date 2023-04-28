@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+#read and print /etc/password
+while IFS=: read -r username x uid gid info home shell
+do
+  echo "$username:$uid:$home"
+done < /etc/passwd
+
