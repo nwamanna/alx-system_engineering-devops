@@ -1,4 +1,4 @@
 #!/usr/bin/env ruby
 word = ARGV[0]
-pattern = /hb*tn/
+pattern = /hbt+n/
 word_match = word.match(pattern)
