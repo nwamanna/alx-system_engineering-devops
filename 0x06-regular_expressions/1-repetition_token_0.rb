@@ -1,7 +1,4 @@
 #!/usr/bin/env ruby
 word = ARGV[0]
 pattern = /ht{2,5}n/
-word_match = word.scan(pattern)
-if word_match
-	puts word_match.join("")
-end
+word_match = word.match(pattern)
