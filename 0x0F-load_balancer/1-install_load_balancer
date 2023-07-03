@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+
+#to enable a dedicated PPA with the following command:
+apt-get install --no-install-recommends software-properties-common
+add-apt-repository ppa:vbernat/haproxy-2.8
+
+apt-get install haproxy=2.8.\*
+
+# Configure HAProxy
+sudo tee /etc/haproxy/haproxy.cfg > /dev/null << EOF
+frontend http-in
+    bind *:80
+    default_backend servers
+
+backend servers
+    balance roundrobin
+    server 191521-web-01 35.153.193.254:80 check
+    server 191521-web-02 3.83.253.141:80 check
+EOF
+
+# Enable HAProxy init script
+sudo sed -i 's/#ENABLED=0/ENABLED=1/' /etc/default/haproxy
+
+# Restart HAProxy service
+sudo service haproxy restart
