@@ -8,7 +8,7 @@ apt-get install haproxy=2.8.\*
 
 # Configure HAProxy
 sudo tee /etc/haproxy/haproxy.cfg > /dev/null << EOF
-frontend http-in
+frontend 191521-lb-01
     bind *:80
     default_backend servers
 
