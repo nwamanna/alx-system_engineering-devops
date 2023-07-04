@@ -22,4 +22,5 @@ EOF
 # Enable HAProxy init script
 sudo sed -i '$ a ENABLE=1' /etc/default/haproxy
 # Restart HAProxy service
+sudo service haproxy start
 sudo service haproxy restart
