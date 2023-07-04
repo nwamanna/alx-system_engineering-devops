@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+#this script installs a haproxy software
 
 # install
 sudo apt -y update
