@@ -1,0 +1,11 @@
+frontend www-https
+    bind *:443 ssl crt /etc/letsencrypt/live/www.zavix.tech/fullchain.pem
+    bind *:80
+    mode http
+    redirect scheme https code 301 if !{ ssl_fc }
+    default_backend servers
+
+backend servers
+    balance roundrobin
+    server 191521-web-01 35.153.193.254:80 check
+    server 191521-web-02 3.83.253.141:80 check	
